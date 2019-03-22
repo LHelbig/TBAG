@@ -1,4 +1,4 @@
-﻿namespace TBAG
+namespace TBAG
 {
     partial class MainMenu
     {
