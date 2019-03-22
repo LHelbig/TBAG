@@ -117,4 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>                                                                 Help
+Commands
+     Basic Use:
+     -Look. Used to see what is in the room.
+     -Inventory. Used to open the inventory.
+     -Get
+     -Use
+     -Open
+     -Close
+     Directional Commands:
+     -North (N and Up also work)
+     -South (S and Down also work)
+     -East (E and Left also work)
+     -West (W and Right also work)</value>
+  </data>
 </root>

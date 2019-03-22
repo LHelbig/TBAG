@@ -16,5 +16,13 @@ namespace TBAG
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainMenu mm = new TBAG.MainMenu();
+            mm.ShowDialog();
+            this.Close();
+        }
     }
 }
