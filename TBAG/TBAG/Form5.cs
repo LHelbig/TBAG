@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace TBAG
 {
-    public partial class GameScreen : Form
+    public partial class LoadGame : Form
     {
-        public GameScreen()
+        public LoadGame()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainMenu mm = new TBAG.MainMenu();
-            mm.ShowDialog();
-            this.Close();
         }
     }
 }

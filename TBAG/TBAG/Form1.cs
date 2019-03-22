@@ -28,28 +28,34 @@ namespace TBAG
             Close();
         }
 
-        private void startNewGame(object sender, EventArgs e)
+        public void startNewGame(object sender, EventArgs e)
         {
             //loads game screen
-            gs.Show();
+            this.Hide();
+            gs.ShowDialog(); //using ShowDialog allows the form to be reopened if closed. use the Dispose command if you want to close.
+            this.Close();
         }
 
-        private void loadGame(object sender, EventArgs e)
+        
+
+        public void loadGame(object sender, EventArgs e)
         {
             //loads game screen
-            gs.Show();
+            gs.ShowDialog(); //using ShowDialog allows the form to be reopened if closed. use the Dispose command if you want to close.
         }
 
         private void editSettings(object sender, EventArgs e)
         {
             //loads settings screen
-            set.Show();
+            this.Hide();
+            set.ShowDialog();
+            this.Close();
         }
 
         private void loadHelp(object sender, EventArgs e)
         {
             //loads help screen
-            hlp.Show();
+            hlp.ShowDialog();
         }
     }
 }
