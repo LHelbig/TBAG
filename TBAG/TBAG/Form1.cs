@@ -16,6 +16,7 @@ namespace TBAG
         GameScreen gs = new GameScreen();
         Settings set = new Settings();
         Help hlp = new Help();
+        LoadGame lg = new LoadGame();
         //MainMenu mm = new MainMenu();
         public MainMenu()
         {
@@ -41,7 +42,9 @@ namespace TBAG
         public void loadGame(object sender, EventArgs e)
         {
             //loads game screen
-            gs.ShowDialog(); //using ShowDialog allows the form to be reopened if closed. use the Dispose command if you want to close.
+            this.Hide();
+            lg.ShowDialog(); //using ShowDialog allows the form to be reopened if closed. use the Dispose command if you want to close.
+            this.Close();
         }
 
         private void editSettings(object sender, EventArgs e)
@@ -55,7 +58,10 @@ namespace TBAG
         private void loadHelp(object sender, EventArgs e)
         {
             //loads help screen
+            this.Hide();
             hlp.ShowDialog();
+            this.Close();
+
         }
     }
 }
