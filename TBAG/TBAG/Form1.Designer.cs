@@ -89,10 +89,10 @@ namespace TBAG
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
-            this.titleLabel.Font = new System.Drawing.Font("Edwardian Script ITC", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(73, 76);
+            this.titleLabel.Font = new System.Drawing.Font("Edwardian Script ITC", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Location = new System.Drawing.Point(46, 67);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(333, 94);
+            this.titleLabel.Size = new System.Drawing.Size(395, 114);
             this.titleLabel.TabIndex = 5;
             this.titleLabel.Text = "The Quest for the Random\r\nUndecided Shiny Object";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
