@@ -131,6 +131,10 @@ Commands
      -North (N and Up also work)
      -South (S and Down also work)
      -East (E and Left also work)
-     -West (W and Right also work)</value>
+     -West (W and Right also work)
+     Combat Commands:
+     -Attack
+     -Defend
+     -Dodge</value>
   </data>
 </root>
