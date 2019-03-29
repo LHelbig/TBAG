@@ -71,7 +71,6 @@
             this.soundCheckBox.TabIndex = 1;
             this.soundCheckBox.Text = "Sound";
             this.soundCheckBox.UseVisualStyleBackColor = true;
-            this.soundCheckBox.CheckedChanged += new System.EventHandler(this.soundCheckBox_CheckedChanged);
             // 
             // checkBox2
             // 
