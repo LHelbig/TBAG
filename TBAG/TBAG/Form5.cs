@@ -17,6 +17,13 @@ namespace TBAG
             InitializeComponent();
         }
 
+        public void loadGameScreen(object sender, EventArgs e)
+        {
+            GameScreen gs = new GameScreen();
+            this.Hide();
+            gs.ShowDialog();
+            this.Close();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
