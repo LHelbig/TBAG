@@ -24,5 +24,14 @@ namespace TBAG
             mm.ShowDialog();
             this.Close();
         }
+
+        private void userInputted(object sender, EventArgs e)
+        {
+            storyText.SelectionLength = storyText.Text.Length + 1;
+            string input = inputBox.Text;
+            storyText.Text.Insert(storyText.SelectionLength, "\n > " + input);
+            
+            inputBox.ResetText();
+        }
     }
 }
