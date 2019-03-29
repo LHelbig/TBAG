@@ -53,6 +53,7 @@
             this.storyText.Location = new System.Drawing.Point(27, 170);
             this.storyText.Multiline = true;
             this.storyText.Name = "storyText";
+            this.storyText.ReadOnly = true;
             this.storyText.Size = new System.Drawing.Size(304, 164);
             this.storyText.TabIndex = 1;
             // 
