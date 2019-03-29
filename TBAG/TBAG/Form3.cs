@@ -29,5 +29,17 @@ namespace TBAG
         {
 
         }
+
+        private void soundCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (soundCheckBox.Checked)
+            {
+                
+            }
+            else
+            {
+                
+            }
+        }
     }
 }

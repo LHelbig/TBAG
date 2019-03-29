@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace TBAG
 {
     public partial class MainMenu : Form
     {
+        static System.IO.Stream menuMusic = Properties.Resources.xenoblade_music;
+        System.Media.SoundPlayer s_player = new System.Media.SoundPlayer(menuMusic);
+
         //These names are like this because something was going wrong. Feel free to rename to something else
         GameScreen gs = new GameScreen();
         Settings set = new Settings();
@@ -56,6 +60,12 @@ namespace TBAG
         {
             //loads help screen
             hlp.ShowDialog();
+        }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+            
+            //s_player.Play();
         }
     }
 }
