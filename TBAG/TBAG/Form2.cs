@@ -12,8 +12,8 @@ namespace TBAG
 {
     public partial class GameScreen : Form
     {
-        static string[] textBoxText = new string[500];
-        static int currentIndex = 0;
+        string[] textBoxText = new string[500];
+        int currentIndex = 0;
         public GameScreen()
         {
             InitializeComponent();
