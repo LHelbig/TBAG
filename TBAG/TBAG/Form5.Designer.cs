@@ -43,7 +43,7 @@
             this.saveSlot1.TabIndex = 0;
             this.saveSlot1.Text = "Saved Adventure 1";
             this.saveSlot1.UseVisualStyleBackColor = true;
-            this.saveSlot1.Click += new System.EventHandler(this.loadGameScreen);
+            this.saveSlot1.Click += new System.EventHandler(this.loadAdventureOne);
             // 
             // saveSlot2
             // 
@@ -54,7 +54,7 @@
             this.saveSlot2.TabIndex = 1;
             this.saveSlot2.Text = "Saved Adventure 2";
             this.saveSlot2.UseVisualStyleBackColor = true;
-            this.saveSlot2.Click += new System.EventHandler(this.loadGameScreen);
+            this.saveSlot2.Click += new System.EventHandler(this.loadAdventureTwo);
             // 
             // saveSlot3
             // 
@@ -65,12 +65,12 @@
             this.saveSlot3.TabIndex = 2;
             this.saveSlot3.Text = "Saved Adventure 3 ";
             this.saveSlot3.UseVisualStyleBackColor = true;
-            this.saveSlot3.Click += new System.EventHandler(this.loadGameScreen);
+            this.saveSlot3.Click += new System.EventHandler(this.loadAdventureThree);
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(9, 232);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 3;

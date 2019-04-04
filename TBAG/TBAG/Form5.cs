@@ -12,23 +12,49 @@ namespace TBAG
 {
     public partial class LoadGame : Form
     {
+        AdventureOne a1 = new AdventureOne();
+        AdventureTwo a2 = new AdventureTwo();
+        AdventureThree a3 = new AdventureThree();
         public LoadGame()
         {
             InitializeComponent();
         }
 
-        public void loadGameScreen(object sender, EventArgs e)
-        {
-            GameScreen gs = new GameScreen();
-            this.Hide();
-            gs.ShowDialog();
-            this.Close();
-        }
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             MainMenu mm = new TBAG.MainMenu();
             mm.ShowDialog();
+            this.Close();
+        }
+
+        private void loadAdventureOne(object sender, EventArgs e)
+        {
+            GameScreen gs = new GameScreen();
+            a1.setCurrent(true);
+            this.Hide();
+            gs.ShowDialog();
+
+            this.Close();
+        }
+
+        private void loadAdventureTwo(object sender, EventArgs e)
+        {
+            GameScreen gs = new GameScreen();
+            a2.setCurrent(true);
+            this.Hide();
+            gs.ShowDialog();
+
+            this.Close();
+        }
+
+        private void loadAdventureThree(object sender, EventArgs e)
+        {
+            GameScreen gs = new GameScreen();
+            a3.setCurrent(true);
+            this.Hide();
+            
+            gs.ShowDialog();
             this.Close();
         }
     }

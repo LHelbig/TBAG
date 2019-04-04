@@ -1,57 +1,60 @@
 ﻿using System;
 
-public class Adventure
+public class AdventureThree
 {
     Boolean reset;
     Boolean full;
-    static String[] textBoxText = String[10];
-    static String[] clues = String[10];
-    static int clueIndex;
+    static String[] textBoxText = new String[10];
+    static String[] clues = new String[10];
+    public static int clueIndex;
     static int mapXCoordinate;
     static int mapYCoordinate;
-    
 
-	public Adventure()
-	{
-	}
+    TBAG.GameScreen gs = new TBAG.GameScreen();
+
+    public AdventureThree()
+    {
+    }
 
     public Boolean getFull()
     {
         return full;
     }
 
-    public void resetAdventure()
+    public int resetAdventure()
     {
-        currentIndex = 0;
         clueIndex = 0;
 
-        foreach(int i in textBoxText){
+        for(int i = 0; i<= 9; i++)
+        {
             textBoxText[i] = "";
         }
 
-        foreach(int i in clues)
+        for(int i = 0; i <= 9; i++)
         {
             clues[i] = "";
         }
         //once map is figured out, reset map coordinates to the beginning
 
         reset = true;
+        gs.clueNumber = 0;
+        return 0;
     }
 
     public int load(String[] textBox, String[] clueArray)
     {
         int counter = 0;
 
-        foreach(int i in textBoxText)
+        for(int i = 0; i <= 9; i++)
         {
-            if(textBoxText[i] != "")
+            if (textBoxText[i] != "")
             {
                 counter++;
                 textBox[i] = textBoxText[i];
             }
         }
 
-        for(int i = 0; i <= clueIndex; i++)
+        for (int i = 0; i <= clueIndex; i++)
         {
             clueArray[i] = clues[i];
         }

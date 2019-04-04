@@ -12,11 +12,39 @@ namespace TBAG
 {
     public partial class GameScreen : Form
     {
-        string[] textBoxText = new string[500];
+        public int adventureNumber;
+        static string[] textBoxText = new string[500];
+        static string[] clues = new string[10];
         int currentIndex = 0;
+        public int clueNumber;
+        AdventureOne a1 = new AdventureOne();
+        AdventureTwo a2 = new AdventureTwo();
+        AdventureThree a3 = new AdventureThree();
+        LoadGame lg = new LoadGame();
         public GameScreen()
         {
             InitializeComponent();
+            if(a1.getCurrent() == true)
+            {
+                currentIndex = a1.load(textBoxText, clues);
+                textBoxText[currentIndex] = "Adventure One Loaded\r\n";
+                storyText.Text = string.Join(" ", textBoxText);
+                currentIndex++;
+            }
+            else if(a2.getCurrent() == true)
+            {
+                currentIndex = a2.load(textBoxText, clues);
+                textBoxText[currentIndex] = "Adventure Two Loaded\r\n";
+                storyText.Text = string.Join(" ", textBoxText);
+                currentIndex++;
+            }
+            else if(a3.getCurrent() == true)
+            {
+                currentIndex = a3.load(textBoxText, clues);
+                textBoxText[currentIndex] = "Adventure Three Loaded\r\n";
+                storyText.Text = string.Join(" ", textBoxText);
+                currentIndex++;
+            }
             textBoxText[currentIndex] = "Please enter some text:";
             storyText.Text = string.Join(" ", textBoxText);
             currentIndex++;
