@@ -2,12 +2,12 @@
 
 public class Room : GameObject
 {
-    private Boolean PLAYERLOCATION;
+    private Boolean PLAYERLOCATION; //is the player in this room?
     private Room NORTH;
     private Room SOUTH;
     private Room EAST;
     private Room WEST;
-    private String[] CONTENTS;
+    private GameObject[] CONTENTS;
 
     public Room()
 	{
@@ -21,5 +21,25 @@ public class Room : GameObject
         EAST = east;
         WEST = west;
 
+    }
+
+    public String lookNorth()
+    {
+        return NORTH.IDVALUE;
+    }
+
+    public String lookSouth()
+    {
+        return SOUTH.IDVALUE;
+    }
+
+    public String lookEast()
+    {
+        return EAST.IDVALUE;
+    }
+
+    public String lookWest()
+    {
+        return WEST.IDVALUE;
     }
 }

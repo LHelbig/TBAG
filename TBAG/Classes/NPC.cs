@@ -9,8 +9,8 @@ public class NPC : GameObject
 	{
 	}
 
-    public addtoInventory()
+    public addToInventory(GameObject item)
     {
-
+        INVENTORY.add(item);
     }
 }
