@@ -21,6 +21,7 @@ namespace TBAG
         AdventureTwo a2 = new AdventureTwo();
         AdventureThree a3 = new AdventureThree();
         LoadGame lg = new LoadGame();
+
         public GameScreen()
         {
             InitializeComponent();
@@ -66,6 +67,7 @@ namespace TBAG
             currentIndex++;
             storyText.Text = string.Join(" ", textBoxText);
             inputBox.ResetText();
+
         }
 
     }
