@@ -17,9 +17,9 @@ namespace TBAG
         static string[] clues = new string[10];
         int currentIndex = 0;
         public int clueNumber;
-        AdventureOne a1;
-        AdventureTwo a2;
-        AdventureThree a3;
+        AdventureOne a1 = new AdventureOne();
+        AdventureTwo a2 = new AdventureTwo();
+        AdventureThree a3 = new AdventureThree();
         LoadGame lg = new LoadGame();
 
         public GameScreen()

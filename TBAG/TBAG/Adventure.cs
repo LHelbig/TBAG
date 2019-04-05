@@ -10,10 +10,10 @@ public class Adventure
     private string[] clues = new string[10];
 
 
-    public Friend(string name, string email)
+    public Adventure(string[] text, string[] clues)
     {
-        this.name = name;
-        this.email = email;
+        this.text = text;
+        this.clues = email;
     }
 
     public string Name
