@@ -7,16 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace TBAG
 {
     public partial class MainMenu : Form
     {
+        static System.IO.Stream menuMusic = Properties.Resources.xenoblade_music;
+        System.Media.SoundPlayer s_player = new System.Media.SoundPlayer(menuMusic);
+
         //These names are like this because something was going wrong. Feel free to rename to something else
         GameScreen gs = new GameScreen();
         Settings set = new Settings();
         Help hlp = new Help();
-        LoadGame lg = new LoadGame();
         //MainMenu mm = new MainMenu();
         public MainMenu()
         {
@@ -42,9 +45,7 @@ namespace TBAG
         public void loadGame(object sender, EventArgs e)
         {
             //loads game screen
-            this.Hide();
-            lg.ShowDialog(); //using ShowDialog allows the form to be reopened if closed. use the Dispose command if you want to close.
-            this.Close();
+            gs.ShowDialog(); //using ShowDialog allows the form to be reopened if closed. use the Dispose command if you want to close.
         }
 
         private void editSettings(object sender, EventArgs e)
@@ -58,10 +59,13 @@ namespace TBAG
         private void loadHelp(object sender, EventArgs e)
         {
             //loads help screen
-            this.Hide();
             hlp.ShowDialog();
-            this.Close();
+        }
 
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+            
+            //s_player.Play();
         }
     }
 }

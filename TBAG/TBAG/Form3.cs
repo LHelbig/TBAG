@@ -24,5 +24,11 @@ namespace TBAG
             mm.ShowDialog();
             this.Close();
         }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
