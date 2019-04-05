@@ -17,11 +17,6 @@ public class Commands
 
     }
 
-    public static void DisplayInventory(IEnumerable )
-    {
-        
-    }
-
     public void North()
 {
 

@@ -48,6 +48,14 @@ public class Player : GameObject
                     return false;
                 }
                 break;
+            case "get":
+                {
+
+                }
+            case "inventory":
+                {
+                    
+                }
             default:
                 Console.WriteLine("error occured");
         }
