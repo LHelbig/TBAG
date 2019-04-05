@@ -17,10 +17,11 @@ namespace TBAG
         static string[] clues = new string[10];
         int currentIndex = 0;
         public int clueNumber;
-        AdventureOne a1 = new AdventureOne();
-        AdventureTwo a2 = new AdventureTwo();
-        AdventureThree a3 = new AdventureThree();
+        AdventureOne a1;
+        AdventureTwo a2;
+        AdventureThree a3;
         LoadGame lg = new LoadGame();
+
         public GameScreen()
         {
             InitializeComponent();
@@ -57,6 +58,7 @@ namespace TBAG
             mm.ShowDialog();
             this.Close();
         }
+        
 
         private void userInputted(object sender, EventArgs e)
         {

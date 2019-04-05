@@ -12,9 +12,9 @@ namespace TBAG
 {
     public partial class LoadGame : Form
     {
-        AdventureOne a1 = new AdventureOne();
-        AdventureTwo a2 = new AdventureTwo();
-        AdventureThree a3 = new AdventureThree();
+        public AdventureOne a1 = new AdventureOne();
+        public AdventureTwo a2 = new AdventureTwo();
+        public AdventureThree a3 = new AdventureThree();
         public LoadGame()
         {
             InitializeComponent();
