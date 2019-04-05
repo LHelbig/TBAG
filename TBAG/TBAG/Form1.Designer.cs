@@ -110,6 +110,7 @@ namespace TBAG
             this.Controls.Add(this.newGameButton);
             this.Name = "MainMenu";
             this.Text = "The Quest for the Random Undecided Shiny Object";
+            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

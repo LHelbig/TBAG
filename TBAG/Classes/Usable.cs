@@ -5,11 +5,11 @@ public class Usable : GameObject
 
     private Boolean ISPLOTNECESSARY;
 
-    public Class1()
+    public Usable()
 	{
 	}
 
-    public setPlot(Boolean value)
+    public setNecessity(Boolean value)
     {
         ISPLOTNECESSARY = value;
     }

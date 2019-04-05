@@ -68,6 +68,7 @@ namespace TBAG
             currentIndex++;
             storyText.Text = string.Join(" ", textBoxText);
             inputBox.ResetText();
+
         }
 
     }
