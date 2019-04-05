@@ -2,7 +2,7 @@
 
 public class Room : GameObject
 {
-    private Boolean PLAYERLOCATION; //is the player in this room?
+    public Boolean PLAYERLOCATION; //is the player in this room?
     private Room NORTH;
     private Room SOUTH;
     private Room EAST;
