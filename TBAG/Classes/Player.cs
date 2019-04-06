@@ -8,7 +8,7 @@ public class Player : GameObject
 	{
 	}
 
-    public parseCommand() //used for command interpretation and execution
+    public void parseCommand() //used for command interpretation and execution
     {
 
     }
@@ -61,5 +61,6 @@ public class Player : GameObject
         LOCATION = moveTargetID;
         LOCATION.PLAYERLOCATION = true;
 
+        return true; 
     }
 }
