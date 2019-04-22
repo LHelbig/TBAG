@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.IO;
+using System;
 
 namespace TBAG
 {
@@ -12,11 +13,14 @@ namespace TBAG
         static int clueIndex;
         static int mapXCoordinate;
         static int mapYCoordinate;
-
+        //StreamReader sr = new StreamReader("Sample1.txt");
+        //StreamWriter sw = new StreamWriter("Sample1.txt");
         //GameScreen gs = new GameScreen();
 
         public AdventureOne()
         {
+            //StreamWriter sw = new StreamWriter("Sample1.txt");
+            //sw.WriteLine("Adventure One Created");
         }
 
         public Boolean getFull()

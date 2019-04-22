@@ -58,6 +58,7 @@ namespace TBAG
             mm.ShowDialog();
             this.Close();
         }
+        
 
         private void userInputted(object sender, EventArgs e)
         {
