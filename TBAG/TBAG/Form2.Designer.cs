@@ -38,10 +38,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 526);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(9, 427);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 23);
+            this.button1.Size = new System.Drawing.Size(108, 19);
             this.button1.TabIndex = 0;
             this.button1.Text = "Exit To Main Menu";
             this.button1.UseVisualStyleBackColor = true;
@@ -49,39 +49,36 @@
             // 
             // storyText
             // 
-            this.storyText.Location = new System.Drawing.Point(36, 209);
-            this.storyText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.storyText.Location = new System.Drawing.Point(27, 170);
             this.storyText.Multiline = true;
             this.storyText.Name = "storyText";
             this.storyText.ReadOnly = true;
-            this.storyText.Size = new System.Drawing.Size(404, 201);
+            this.storyText.Size = new System.Drawing.Size(304, 164);
             this.storyText.TabIndex = 1;
             // 
             // inputBox
             // 
-            this.inputBox.Location = new System.Drawing.Point(36, 462);
-            this.inputBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputBox.Location = new System.Drawing.Point(27, 375);
             this.inputBox.Name = "inputBox";
-            this.inputBox.Size = new System.Drawing.Size(301, 22);
+            this.inputBox.Size = new System.Drawing.Size(227, 20);
             this.inputBox.TabIndex = 2;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(36, 42);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Image = global::TBAG.Properties.Resources.tbag_Fantasy_Stock;
+            this.pictureBox1.InitialImage = global::TBAG.Properties.Resources.tbag_Fantasy_Stock;
+            this.pictureBox1.Location = new System.Drawing.Point(27, 34);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(405, 160);
+            this.pictureBox1.Size = new System.Drawing.Size(304, 130);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(347, 462);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(260, 375);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 28);
+            this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
             this.button2.Text = "submit";
             this.button2.UseVisualStyleBackColor = true;
@@ -89,15 +86,15 @@
             // 
             // GameScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 567);
+            this.ClientSize = new System.Drawing.Size(359, 461);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.inputBox);
             this.Controls.Add(this.storyText);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "GameScreen";
             this.Text = "The Quest for the Random Undecided Shiny Object";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -70,6 +70,16 @@ namespace TBAG.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tbag_Fantasy_Stock {
+            get {
+                object obj = ResourceManager.GetObject("tbag Fantasy Stock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream xenoblade_music {

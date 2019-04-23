@@ -21,7 +21,7 @@ namespace TBAG
         //These names are like this because something was going wrong. Feel free to rename to something else
         GameScreen gs = new GameScreen();
         Settings set = new Settings();
-        LoadGame lg = new LoadGame();
+        alertForm af = new alertForm();
         Help hlp = new Help();
         //MainMenu mm = new MainMenu();
         public MainMenu()
@@ -88,9 +88,9 @@ namespace TBAG
         public void loadGame(object sender, EventArgs e)
         {
             //loads game screen
-            this.Hide();
-            lg.ShowDialog();
-            this.Close();//using ShowDialog allows the form to be reopened if closed. use the Dispose command if you want to close.
+            //this.Hide();
+            af.ShowDialog();
+            //this.Close();//using ShowDialog allows the form to be reopened if closed. use the Dispose command if you want to close.
         }
 
         private void editSettings(object sender, EventArgs e)
