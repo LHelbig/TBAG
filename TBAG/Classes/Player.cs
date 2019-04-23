@@ -8,9 +8,24 @@ public class Player : GameObject
 	{
 	}
 
-    public parseCommand() //used for command interpretation and execution
+    public void parseCommand() //used for command interpretation and execution
     {
+        switch (command)
+        {
+            case "get":
+                {
 
+                }
+            case "inventory":
+                {
+                    ArrayList invList = new ArrayList();
+                    invList.add("TEST1");
+                    invList.add("TEST2");
+                    invList.add(1);
+                    invList.add(2);
+
+                }
+        }
     }
 
     private Boolean updateLocation(String direction) //move n, s, e, w from current room, returns truw is able to move to room
@@ -52,14 +67,6 @@ public class Player : GameObject
                     return false;
                 }
                 break;
-            case "get":
-                {
-
-                }
-            case "inventory":
-                {
-                    
-                }
             default:
                 Console.WriteLine("error occured");
         }
