@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,47 +13,67 @@ namespace TBAG
 {
     public partial class GameScreen : Form
     {
-        public int adventureNumber;
+        public string adventureNumber;
         static string[] textBoxText = new string[500];
         static string[] clues = new string[10];
         int currentIndex = 0;
         public int clueNumber;
-        AdventureOne a1 = new AdventureOne();
+
+        /*AdventureOne a1 = new AdventureOne();
         AdventureTwo a2 = new AdventureTwo();
-        AdventureThree a3 = new AdventureThree();
+        AdventureThree a3 = new AdventureThree();*/
+
+        //to be used later to save games
+        //AdventureInformation adventure = AdventureInformation.Instance();
+
         LoadGame lg = new LoadGame();
 
         public GameScreen()
         {
+           // adventure.Load();
             InitializeComponent();
-            if(a1.getCurrent() == true)
+            /*if(adventure.getCurrent("one"))
             {
-                currentIndex = a1.load(textBoxText, clues);
+                adventureNumber = "one";
+                adventure.setFull(adventureNumber, true);
+                adventure.Save();
+                //currentIndex = a1.load(textBoxText, clues);
                 textBoxText[currentIndex] = "Adventure One Loaded\r\n";
                 storyText.Text = string.Join(" ", textBoxText);
                 currentIndex++;
             }
-            else if(a2.getCurrent() == true)
+            else if(adventure.getCurrent("two"))
             {
-                currentIndex = a2.load(textBoxText, clues);
+                adventureNumber = "two";
+                adventure.setFull(adventureNumber, true);
+                adventure.Save();
+                //currentIndex = a2.load(textBoxText, clues);
                 textBoxText[currentIndex] = "Adventure Two Loaded\r\n";
                 storyText.Text = string.Join(" ", textBoxText);
                 currentIndex++;
             }
-            else if(a3.getCurrent() == true)
+            else if(adventure.getCurrent("three"))
             {
-                currentIndex = a3.load(textBoxText, clues);
+                adventureNumber = "three";
+                adventure.setFull(adventureNumber, true);
+                adventure.Save();
+                //currentIndex = a3.load(textBoxText, clues);
                 textBoxText[currentIndex] = "Adventure Three Loaded\r\n";
                 storyText.Text = string.Join(" ", textBoxText);
                 currentIndex++;
-            }
+            }*/
             textBoxText[currentIndex] = "Please enter some text:";
             storyText.Text = string.Join(" ", textBoxText);
             currentIndex++;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*adventure.setCurrent("one", false);
+            adventure.setCurrent("two", false);
+            adventure.setCurrent("three", false);
+            adventure.Save();*/
             this.Hide();
             MainMenu mm = new TBAG.MainMenu();
             mm.ShowDialog();
