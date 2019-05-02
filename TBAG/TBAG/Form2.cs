@@ -17,36 +17,15 @@ namespace TBAG
         static string[] clues = new string[10];
         int currentIndex = 0;
         public int clueNumber;
-        AdventureOne a1;
-        AdventureTwo a2;
-        AdventureThree a3;
-        LoadGame lg;
-        Player thePlayer;
-        Room roomA;
-        Room roomB;
-        Room roomC;
-        Room roomD;
-
-
-        //theRoom.setNorth(roomA);
+       // AdventureOne a1 = new AdventureOne();
+       // AdventureTwo a2 = new AdventureTwo();
+       // AdventureThree a3 = new AdventureThree();
+        LoadGame lg = new LoadGame();
 
         public GameScreen()
         {
             InitializeComponent();
-            a1 = new AdventureOne();
-            a2 = new AdventureTwo();
-            a3 = new AdventureThree();
-            lg = new LoadGame();
-            thePlayer = new Player();
-            roomA = new Room();
-            roomB = new Room();
-            roomC = new Room();
-            roomD = new Room();
-
-            roomA.setAdjacent(null, null, null, roomD);
-
-
-            if (a1.getCurrent() == true)
+            /*if(a1.getCurrent() == true)
             {
                 currentIndex = a1.load(textBoxText, clues);
                 textBoxText[currentIndex] = "Adventure One Loaded\r\n";
@@ -69,7 +48,7 @@ namespace TBAG
             }
             textBoxText[currentIndex] = "Please enter some text:";
             storyText.Text = string.Join(" ", textBoxText);
-            currentIndex++;
+            currentIndex++;*/
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -81,28 +60,18 @@ namespace TBAG
         }
         
 
-        public void userInputted(object sender, EventArgs e)
+        private void userInputted(object sender, EventArgs e)
         {
-          
             storyText.SelectionLength = storyText.Text.Length + 1;
-            string command = inputBox.Text;
-            thePlayer.parseCommand(command);
-       
-            textBoxText[currentIndex] = "\r\n > " + command;
+            string input = inputBox.Text;
+            textBoxText[currentIndex] = "\r\n > " + input;
             currentIndex++;
             storyText.Text = string.Join(" ", textBoxText);
             inputBox.ResetText();
 
-            
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void inputBox_TextChanged(object sender, EventArgs e)
         {
 
         }

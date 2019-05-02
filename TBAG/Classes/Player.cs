@@ -3,25 +3,19 @@
 public class Player : GameObject
 {
     Room LOCATION;
-    Array invList = new Array[100];
 
 	public Player()
 	{
 	}
 
-    public void parseCommand(String command) //used for command interpretation and execution
+    public void parseCommand() //used for command interpretation and execution
     {
-        if(command == "inventory" || command == "look")
+        switch (command)
         {
-            if (command == "inventory")
-            {
+            case "get":
+                {
 
-            }
-            else if(command == "look")
-            {
-
-            }
-        }
+                }
             case "inventory":
                 {
                     ArrayList invList = new ArrayList();
