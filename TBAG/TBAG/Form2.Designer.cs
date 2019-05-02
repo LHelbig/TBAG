@@ -64,6 +64,7 @@
             this.inputBox.Name = "inputBox";
             this.inputBox.Size = new System.Drawing.Size(301, 22);
             this.inputBox.TabIndex = 2;
+            this.inputBox.TextChanged += new System.EventHandler(this.inputBox_TextChanged);
             // 
             // pictureBox1
             // 
