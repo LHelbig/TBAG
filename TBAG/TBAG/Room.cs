@@ -11,6 +11,10 @@ public class Room : GameObject
 
     public Room()
 	{
+        NORTH = null;
+        SOUTH = null;
+        EAST = null;
+        WEST = null;
 	}
 
     //initializes room with references to all adjacent rooms
@@ -22,6 +26,33 @@ public class Room : GameObject
         WEST = west;
 
     }
+
+    public void setAdjacent(Room north, Room south, Room east, Room west)
+    {
+        NORTH = north;
+        SOUTH = south;
+        EAST = east;
+        WEST = west;
+    }
+
+    public void setNorth(Room north)
+    {
+        NORTH = north;
+    }
+
+    public void setSouth(Room south)
+    {
+        SOUTH = south;
+    }
+    public void setEast(Room east)
+    {
+        EAST = east;
+    }
+    public void setWest(Room west)
+    {
+        WEST = west;
+    }
+
 
     public String lookNorth()
     {

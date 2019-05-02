@@ -1,38 +1,32 @@
 ﻿using System;
+using System.Collections;
 
 public class Player : GameObject
 {
     Room LOCATION;
 
-	public Player(String name, String descrip, String id)
+	public Player()
 	{
-        NAME = name;
-        DESCRIPTION = descrip;
-        IDVALUE = id;
-    }
+	}
 
-    public void parseCommand(String command) //used for command interpretation and execution
+    public void parseCommand(string command) //used for command interpretation and execution
     {
-        String[] data = command.Split(' ');
-        
-        switch (data[0])
+        string[] word = command.Split(' ');
+        switch (word[0])
         {
             case "get":
                 {
-
+                    break;
                 }
             case "inventory":
                 {
                     ArrayList invList = new ArrayList();
-                    invList.add("TEST1");
-                    invList.add("TEST2");
-                    invList.add(1);
-                    invList.add(2);
-
+                    break;
                 }
             case "move":
                 {
-                    updateLocation(data[1]);
+                    updateLocation(word[1]);
+                    break;
                 }
         }
     }
@@ -53,46 +47,40 @@ public class Player : GameObject
                 }
                 break;
             case "south":
-                { moveTargetID = LOCATION.lookSouth();
-                    if (moveTargetID == null)
-                    {
-                        Console.WriteLine("no room in that direction");
-                        return false;
-                    }
-                    break;
+                moveTargetID = LOCATION.lookSouth();
+                if (moveTargetID == null)
+                {
+                    Console.WriteLine("no room in that direction");
+                    return false;
                 }
-
+                break;
             case "east":
+                moveTargetID = LOCATION.lookEast();
+                if (moveTargetID == null)
                 {
-                    moveTargetID = LOCATION.lookEast();
-                    if (moveTargetID == null)
-                    {
-                        Console.WriteLine("no room in that direction");
-                        return false;
-                    }
-                    break;
+                    Console.WriteLine("no room in that direction");
+                    return false;
                 }
+                break;
             case "west":
+                moveTargetID = LOCATION.lookWest();
+                if (moveTargetID == null)
                 {
-                    moveTargetID = LOCATION.lookWest();
-                    if (moveTargetID == null)
-                    {
-                        Console.WriteLine("no room in that direction");
-                        return false;
-                    }
-                    break;
+                    Console.WriteLine("no room in that direction");
+                    return false;
                 }
+                break;
             default:
-                {
-                    Console.WriteLine("error occured");
-                    break;
-                }
+                Console.WriteLine("error occured");
+                return false;
+                break;
         }
 
         //move to new room, while changing the flag that is set
         LOCATION.PLAYERLOCATION = false;
-        LOCATION = moveTargetID;
+        //LOCATION = moveTargetID; fix me by getting room from the idvalue
         LOCATION.PLAYERLOCATION = true;
+        return true;
 
     }
 }

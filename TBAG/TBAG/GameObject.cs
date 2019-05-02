@@ -7,6 +7,11 @@ public class GameObject
     public String DESCRIPTION; //flavor text
     public String IDVALUE; //in-code identifier, unique to each object
 
+
+    public GameObject()
+    {
+
+    }
     public GameObject(String name, String descrip, String id)
 	{
         NAME = name;
