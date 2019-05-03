@@ -17,9 +17,9 @@ namespace TBAG
         static string[] clues = new string[10];
         int currentIndex = 0;
         public int clueNumber;
-        AdventureOne a1;
-        AdventureTwo a2;
-        AdventureThree a3;
+        //AdventureOne a1;
+        //AdventureTwo a2;
+        //AdventureThree a3;
         LoadGame lg;
         Player thePlayer;
         Room roomA;
@@ -33,9 +33,9 @@ namespace TBAG
         public GameScreen()
         {
             InitializeComponent();
-            a1 = new AdventureOne();
-            a2 = new AdventureTwo();
-            a3 = new AdventureThree();
+            //a1 = new AdventureOne();
+            //a2 = new AdventureTwo();
+            //a3 = new AdventureThree();
             lg = new LoadGame();
             thePlayer = new Player();
             roomA = new Room();
@@ -46,7 +46,7 @@ namespace TBAG
             roomA.setAdjacent(null, null, null, roomD);
 
 
-            if (a1.getCurrent() == true)
+           /* if (a1.getCurrent() == true)
             {
                 currentIndex = a1.load(textBoxText, clues);
                 textBoxText[currentIndex] = "Adventure One Loaded\r\n";
@@ -66,7 +66,7 @@ namespace TBAG
                 textBoxText[currentIndex] = "Adventure Three Loaded\r\n";
                 storyText.Text = string.Join(" ", textBoxText);
                 currentIndex++;
-            }
+            }*/
             textBoxText[currentIndex] = "Please enter some text:";
             storyText.Text = string.Join(" ", textBoxText);
             currentIndex++;

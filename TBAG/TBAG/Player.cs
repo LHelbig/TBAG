@@ -86,7 +86,6 @@ public class Player : GameObject
             default:
                 Console.WriteLine("error occured");
                 return false;
-                break;
         }
 
         //move to new room, while changing the flag that is set
