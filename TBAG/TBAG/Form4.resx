@@ -117,4 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Welcome to the Quest for the Random Undecided Siny Object!
+
+This game has a simple premise:
+Give commands to the game and see where it leads you!
+
+The acceptable commands are such:
+move north
+move south
+move east
+move west
+inventory
+
+seems pretty basic right?
+
+A word of warning:
+the game is highly judgmental.
+mess up the commands at all, and it may not be happy with you.
+
+Where will you end up? Will you find the random object? Did the creators ever decide what that object would be? Or is it still truly undecided?
+
+I guess there is only one way to find out.
+
+Good luck.</value>
+  </data>
 </root>

@@ -88,9 +88,9 @@ namespace TBAG
         public void loadGame(object sender, EventArgs e)
         {
             //loads game screen
-            //this.Hide();
-            //af.ShowDialog();
-            //this.Close();//using ShowDialog allows the form to be reopened if closed. use the Dispose command if you want to close.
+            this.Hide();
+            gs.ShowDialog();
+            this.Close();//using ShowDialog allows the form to be reopened if closed. use the Dispose command if you want to close.
         }
 
         private void editSettings(object sender, EventArgs e)
@@ -104,7 +104,9 @@ namespace TBAG
         private void loadHelp(object sender, EventArgs e)
         {
             //loads help screen
+            this.Hide();
             hlp.ShowDialog();
+            this.Close();
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
