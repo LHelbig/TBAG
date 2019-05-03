@@ -4,8 +4,10 @@ using System.Collections;
 public class Player : GameObject
 {
     Room LOCATION;
+    ArrayList invList = new ArrayList();
 
-	public Player()
+
+    public Player()
 	{
 	}
 
@@ -20,7 +22,18 @@ public class Player : GameObject
                 }
             case "inventory":
                 {
-                    ArrayList invList = new ArrayList();
+                    if (invList.Count == 0)
+                    {
+                        Console.WriteLine("There is nothing in your inventory.");
+                        break;
+                    }
+                    else if(invList.Count != 0)
+                    {
+                        foreach(var item in invList) 
+                        {
+                            Console.WriteLine(" - " + item);
+                        }
+                    }
                     break;
                 }
             case "move":
