@@ -9,12 +9,13 @@ public class Room : GameObject
     private Room WEST;
     private GameObject[] CONTENTS;
 
-    public Room()
+    public Room(String roomID)
 	{
         NORTH = null;
         SOUTH = null;
         EAST = null;
         WEST = null;
+        IDVALUE = roomID;
 	}
 
     //initializes room with references to all adjacent rooms
@@ -54,23 +55,23 @@ public class Room : GameObject
     }
 
 
-    public String lookNorth()
+    public Room lookNorth()
     {
-        return NORTH.IDVALUE;
+        return NORTH;
     }
 
-    public String lookSouth()
+    public Room lookSouth()
     {
-        return SOUTH.IDVALUE;
+        return SOUTH;
     }
 
-    public String lookEast()
+    public Room lookEast()
     {
-        return EAST.IDVALUE;
+        return EAST;
     }
 
-    public String lookWest()
+    public Room lookWest()
     {
-        return WEST.IDVALUE;
+        return WEST;
     }
 }

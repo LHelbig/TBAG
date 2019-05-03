@@ -18,6 +18,7 @@ public class Player : GameObject
     public Queue parseCommand(string command) //used for command interpretation and execution
     {
         returnText.Clear();
+        Console.WriteLine("Cleared.");
         string[] word = command.Split(' ');
         switch (word[0])
         {
@@ -49,7 +50,7 @@ public class Player : GameObject
                 }
             case "move":
                 {
-                    returnText.Enqueue(updateLocation(word[1]));
+                    updateLocation(word[1]);
                     return returnText;
                 }
             default:
@@ -60,40 +61,49 @@ public class Player : GameObject
         }
     }
 
-    private Boolean updateLocation(String direction) //move n, s, e, w from current room, returns truw is able to move to room
+    public void setLocation(Room place)
     {
-        String moveTargetID; //id of room to be moved to
+        LOCATION = place;
+        LOCATION.PLAYERLOCATION = true;
+    }
+
+    private Boolean updateLocation(String direction) //move n, s, e, w from current room, returns true is able to move to room
+    {
+        Room moveTarget; //id of room to be moved to
 
         //check to see if there is a room to move to
         switch (direction)
         {
             case "north":
-                moveTargetID = LOCATION.lookNorth();
-                if (moveTargetID == null)
+                moveTarget = LOCATION.lookNorth();
+                if (moveTarget == null)
                 {
                     Console.WriteLine("no room in that direction");
+                    returnText.Enqueue("no room in that direction");
                     return false;
                 }
                 break;
             case "south":
-                moveTargetID = LOCATION.lookSouth();
-                if (moveTargetID == null)
+                moveTarget = LOCATION.lookSouth();
+                if (moveTarget == null)
                 {
                     Console.WriteLine("no room in that direction");
+                    returnText.Enqueue("no room in that direction");
                     return false;
                 }
                 break;
             case "east":
-                moveTargetID = LOCATION.lookEast();
-                if (moveTargetID == null)
+                moveTarget = LOCATION.lookEast();
+                if (moveTarget == null)
                 {
                     Console.WriteLine("no room in that direction");
+                    returnText.Enqueue("no room in that direction");
                     return false;
                 }
                 break;
             case "west":
-                moveTargetID = LOCATION.lookWest();
-                if (moveTargetID == null)
+                moveTarget = LOCATION.lookWest();
+                if (moveTarget == null)
                 {
                     Console.WriteLine("no room in that direction");
                     return false;
@@ -101,13 +111,16 @@ public class Player : GameObject
                 break;
             default:
                 Console.WriteLine("error occured");
+                returnText.Enqueue("no room in that direction");
                 return false;
         }
 
         //move to new room, while changing the flag that is set
         LOCATION.PLAYERLOCATION = false;
-        //LOCATION = moveTargetID; fix me by getting room from the idvalue
+        LOCATION = moveTarget;
         LOCATION.PLAYERLOCATION = true;
+
+        returnText.Enqueue("You moved to " + LOCATION.IDVALUE);
         return true;
 
     }

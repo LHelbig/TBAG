@@ -41,12 +41,16 @@ namespace TBAG
             //a3 = new AdventureThree();
             lg = new LoadGame();
             thePlayer = new Player();
-            roomA = new Room();
-            roomB = new Room();
-            roomC = new Room();
-            roomD = new Room();
+            roomA = new Room("R_A");
+            roomB = new Room("R_B");
+            roomC = new Room("R_C");
+            roomD = new Room("R_D");
 
-            roomA.setAdjacent(null, null, null, roomD);
+            thePlayer.setLocation(roomA);
+            roomA.setAdjacent(null, roomC, roomB, null);
+            roomB.setAdjacent(null, roomD, null, roomA);
+            roomC.setAdjacent(roomA, null, roomD, null);
+            roomD.setAdjacent(roomB, null, null, roomC);
 
 
            /* if (a1.getCurrent() == true)
@@ -82,36 +86,41 @@ namespace TBAG
             mm.ShowDialog();
             this.Close();
         }
-        
+
 
         public void userInputted(object sender, EventArgs e)
         {
-          
+
             storyText.SelectionLength = storyText.Text.Length + 1;
             string command = inputBox.Text;
             thePlayer.parseCommand(command).CopyTo(screenOut, 0);
             textBoxText[currentIndex] = "\r\n > " + command;
             currentIndex++;
+
             for (int i = 0; i < screenOut.Length; i++)
             {
                 try
                 {
-                    //storyText.AppendText(screenOut[i]);
+                    storyText.AppendText(screenOut[i]);
                     textBoxText[currentIndex] = "\r\n " + screenOut[i];
                     currentIndex++;
-                    storyText.Text = string.Join(" ", textBoxText);
-                    inputBox.ResetText();
-                } catch(NullReferenceException n)
+                    //storyText.Text = string.Join(" ", textBoxText);
+                    //inputBox.ResetText();
+                }
+                catch (NullReferenceException n)
                 {
                     break;
                 }
-                 
+
             }
-            //storyText.Text = string.Join(" ", textBoxText);
-            //inputBox.ResetText();
 
-            
+            storyText.Text = string.Join(" ", textBoxText);
+            inputBox.ResetText();
+            for (int i = 0; i < screenOut.Length; i++)
+            {
+                screenOut[i] = null;
 
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
