@@ -5,41 +5,57 @@ public class Player : GameObject
 {
     Room LOCATION;
     ArrayList invList = new ArrayList();
+    Queue returnText = new Queue();
+    
 
 
     public Player()
 	{
-	}
+        invList.Add("Test");
+        invList.Add("Jacob wants this semester to be over already.");
+    }
 
-    public void parseCommand(string command) //used for command interpretation and execution
+    public Queue parseCommand(string command) //used for command interpretation and execution
     {
+        returnText.Clear();
         string[] word = command.Split(' ');
         switch (word[0])
         {
             case "get":
                 {
-                    break;
+                    returnText.Enqueue("get filler");
+                    return returnText;
                 }
             case "inventory":
                 {
                     if (invList.Count == 0)
                     {
                         Console.WriteLine("There is nothing in your inventory.");
-                        break;
+                        returnText.Enqueue("There is nothing in your inventory.");
+                        return returnText;
+
                     }
                     else if(invList.Count != 0)
                     {
                         foreach(var item in invList) 
                         {
                             Console.WriteLine(" - " + item);
+                            returnText.Enqueue(" - " + item);
+ 
+
                         }
                     }
-                    break;
+                    return returnText;
                 }
             case "move":
                 {
-                    updateLocation(word[1]);
-                    break;
+                    returnText.Enqueue(updateLocation(word[1]));
+                    return returnText;
+                }
+            default:
+                {
+                    returnText.Enqueue("You imbecile.");
+                    return returnText;
                 }
         }
     }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,11 +22,13 @@ namespace TBAG
         //AdventureTwo a2;
         //AdventureThree a3;
         LoadGame lg;
+        String[]screenOut = new String[100];
         Player thePlayer;
         Room roomA;
         Room roomB;
         Room roomC;
         Room roomD;
+        
 
 
         //theRoom.setNorth(roomA);
@@ -86,12 +89,26 @@ namespace TBAG
           
             storyText.SelectionLength = storyText.Text.Length + 1;
             string command = inputBox.Text;
-            thePlayer.parseCommand(command);
-       
+            thePlayer.parseCommand(command).CopyTo(screenOut, 0);
             textBoxText[currentIndex] = "\r\n > " + command;
             currentIndex++;
-            storyText.Text = string.Join(" ", textBoxText);
-            inputBox.ResetText();
+            for (int i = 0; i < screenOut.Length; i++)
+            {
+                try
+                {
+                    //storyText.AppendText(screenOut[i]);
+                    textBoxText[currentIndex] = "\r\n " + screenOut[i];
+                    currentIndex++;
+                    storyText.Text = string.Join(" ", textBoxText);
+                    inputBox.ResetText();
+                } catch(NullReferenceException n)
+                {
+                    break;
+                }
+                 
+            }
+            //storyText.Text = string.Join(" ", textBoxText);
+            //inputBox.ResetText();
 
             
 
