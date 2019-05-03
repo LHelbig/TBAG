@@ -11,8 +11,13 @@ public class Player : GameObject
 
     public Player()
 	{
-        invList.Add("Test");
-        invList.Add("Jacob wants this semester to be over already.");
+        invList.Add("Sword");
+        invList.Add("Clothing(Worn)");
+        invList.Add("Potion");
+        invList.Add("Journal");
+        invList.Add("Napsack");
+        invList.Add("Bedroll");
+
     }
 
     public Queue parseCommand(string command) //used for command interpretation and execution
@@ -24,7 +29,8 @@ public class Player : GameObject
         {
             case "get":
                 {
-                    returnText.Enqueue("get filler");
+                    invList.Add(word[1]);
+                    returnText.Enqueue(" You picked up " + word[1]);
                     return returnText;
                 }
             case "inventory":
@@ -55,7 +61,7 @@ public class Player : GameObject
                 }
             default:
                 {
-                    returnText.Enqueue("You imbecile.");
+                    returnText.Enqueue("You imbecile. That isn't a valid input.");
                     return returnText;
                 }
         }
