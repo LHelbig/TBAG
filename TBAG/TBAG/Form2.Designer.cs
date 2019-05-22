@@ -39,7 +39,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(9, 427);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 19);
             this.button1.TabIndex = 0;
@@ -53,6 +53,7 @@
             this.storyText.Multiline = true;
             this.storyText.Name = "storyText";
             this.storyText.ReadOnly = true;
+            this.storyText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.storyText.Size = new System.Drawing.Size(304, 164);
             this.storyText.TabIndex = 1;
             // 
@@ -95,7 +96,7 @@
             this.Controls.Add(this.inputBox);
             this.Controls.Add(this.storyText);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GameScreen";
             this.Text = "The Quest for the Random Undecided Shiny Object";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

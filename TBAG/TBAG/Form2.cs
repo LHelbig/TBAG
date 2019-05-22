@@ -74,7 +74,7 @@ namespace TBAG
                 storyText.Text = string.Join(" ", textBoxText);
                 currentIndex++;
             }*/
-            textBoxText[currentIndex] = "You enter a room. There is a potion on the floor.";
+            textBoxText[currentIndex] = "Please enter a command:";
             storyText.Text = string.Join(" ", textBoxText);
             currentIndex++;
         }

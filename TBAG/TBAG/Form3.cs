@@ -27,7 +27,10 @@ namespace TBAG
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-
+            float fontSize = (float)numericUpDown1.Value;
+            label1.Font = new Font(label1.Font.FontFamily, fontSize, label1.Font.Style);
+            soundCheckBox.Font = new Font(soundCheckBox.Font.FontFamily, fontSize, label1.Font.Style);
+            checkBox2.Font = new Font(checkBox2.Font.FontFamily, fontSize, label1.Font.Style);
         }
 
     }
